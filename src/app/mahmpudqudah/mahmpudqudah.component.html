@@ -1,0 +1,51 @@
+<p>
+  mahmpudqudah works!
+  <br>{{name}}<br>{{lname}}<br>{{age}}<br>
+  {{mahmoudInfo.job}},{{mahmoudInfo.company}}
+  <br>{{names}}
+</p>
+<ul>
+  <li *ngFor="let arr of myArr"> {{ arr }} </li>
+</ul>
+
+<img src="{{marioLogo}}">
+<img [src]="marioLogo">
+<img bind-src="marioLogo">
+
+<button (click)="myEvent($event)" [disabled] = "buttonStatus"> OK </button>
+<br>
+
+<ul>
+  <li *ngFor="let per of persons"> {{per.id}} - {{per.name}} - {{per.lname}} - {{per.age}} </li>
+</ul>
+<br>
+
+<div [ngSwitch]="myNumber" >
+ 
+
+<p *ngSwitchCase="100" >
+  Hello 100
+</p>
+
+<p *ngSwitchCase="200" >
+  Hello 200
+</p>
+
+<p [class.myClass]="classCss" *ngSwitchCase="300" >
+  {{ 'Hello 300' | uppercase }}
+</p>
+
+<p *ngSwitchCase="400" >
+  Hello 400
+</p>
+
+<p *ngSwitchCase="500" >
+  Hello 500
+</p>
+
+
+<p *ngSwitchDefault >
+  Hello
+</p>
+
+</div>
